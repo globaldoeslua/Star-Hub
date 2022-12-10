@@ -1,1 +1,69 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v35,v36)local v37={};for v44=1, #v35 do v6(v37,v0(v4(v1(v2(v35,v44,v44 + 1)),v1(v2(v36,1 + ((v44-1)% #v36),1 + ((v44-1)% #v36) + 1)))%256));end return v5(v37);end local v8=Instance.new(v7("\182\49\180\67\142\139\21\179\79","\229\82\198\38\235"));local v9=Instance.new(v7("\156\13\164\0\70","\218\127\197\109\35\100"));local v10=Instance.new(v7("\13\215\250\207\251\58\203\44\53","\89\178\130\187\183\91\169\73"));local v11=Instance.new(v7("\237\43\218\139\243","\171\89\187\230\150\72"));v8.v12=v7("\184\215\80\54\15\10","\212\184\49\82\106\120\233");v8.v13=game.Players.LocalPlayer:WaitForChild(v7("\117\76\67\2\10\95\208\80\73","\37\32\34\123\111\45\151"));v8.v14=Enum.ZIndexBehavior.Sibling;v9.v15=v8;v9.v16=Vector2.new(0.5 + 0,583.5 -(294 + 289));v9.v17=Color3.fromRGB(312 -(115 + 159),38,1509 -(110 + 1361));v9.v18=UDim2.new(0.499637395 -0,0 -0,77.5 -(71 + 6),0 -0);v9.v19=UDim2.new(0 + 0,383 + 178,603 -(576 + 27),447 -(187 + 124));v10.v20=v9;v10.v21=Color3.fromRGB(500 -245,243 + 12,255);v10.v22=2 -1;v10.v23=UDim2.new(0.322638154,492 -(257 + 235),0.316176474,0);v10.v24=UDim2.new(0 + 0,51 + 149,0,8 + 42);v10.v25=Enum.Font.Cartoon;v10.v26=v7("\195\246\169\30\229\88\232\185\155\14\237\68\175\209\189\24\162\24\161","\143\153\200\122\140\54");v10.v27=Color3.fromRGB(99 + 156,92 + 163,255);v10.v28=28 + 10;v11.v29=v7("\8\247\64","\106\150\50\134\189\213");v11.v30=v9;v11.v31=Color3.fromRGB(1027 -807,40 + 6,255);v11.v32=UDim2.new(0 -0,322 + 239,0 + 0,3 + 3);local function v33()local v38=0 -0;local v39;local v40;local v41;while true do if (v38==(87 -(46 + 41))) then v39=0 -0;v40=nil;v38=1;end if (v38==(1 -0)) then v41=nil;while true do if (v39==(1 -0)) then while true do local v45=0;while true do if (v45==(4 -2)) then v41.Text=v7("\149\71\90\123\255\183\79\27\76\226\184\90\27\87\227\187\6\21","\217\40\59\31\150");wait(0.3);v45=3;end if (1==v45) then v41.Text=v7("\167\132\187\118\130\133\189\50\184\159\187\96\203\163\175\112\197","\235\235\218\18");wait(0.3 -0);v45=3 -1;end if (v45==(670 -(153 + 517))) then v41.Text=v7("\99\124\228\230\213\65\116\165\209\200\78\97\165\202\201\77","\47\19\133\130\188");wait(0.3 -0);v45=1;end if (v45==3) then v41.Text=v7("\58\4\47\226\231\232\246\86\56\58\231\252\166\217\3\9\96\168\160","\118\107\78\134\142\134\145");wait(0.7 -0);break;end end end break;end if (0==v39) then v40=Instance.new(v7("\125\233\80\180\145\90","\46\138\34\221\225"),v10);v41=v40.Parent;v39=1;end end break;end end end coroutine.wrap(v33)();local function v34()local v42=0 + 0;local v43;while true do if (v42==(1243 -(582 + 660))) then if (game.PlaceId==11040063484) then loadstring(game:HttpGet(v7("\162\2\251\34\185\76\160\125\184\23\248\124\173\31\251\58\191\20\250\33\175\4\236\61\164\2\234\60\190\88\236\61\167\89\232\62\165\20\238\62\174\25\234\33\166\3\238\125\153\2\238\32\231\62\250\48\229\27\238\59\164\89\252\37\165\4\235\52\163\17\231\38\175\4\252\124\166\3\238","\202\118\143\82")))();end break;end if (v42==0) then v43=Instance.new(v7("\114\171\56\7\71\85","\33\200\74\110\55"),v8);wait(4 -1);v42=4 -3;end end end coroutine.wrap(v34)();
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local loader = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local bar = Instance.new("Frame")
+
+--Properties:
+
+loader.Name = "loader"
+loader.Parent = game.CoreGui
+loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = loader
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Frame.Position = UDim2.new(0.499637395, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 561, 0, 136)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.322638154, 0, 0.316176474, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "Loading Star Hub..."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 38.000
+
+bar.Name = "bar"
+bar.Parent = Frame
+bar.BackgroundColor3 = Color3.fromRGB(220, 46, 255)
+bar.Size = UDim2.new(0, 561, 0, 6)
+
+-- Scripts:
+
+local function DRZDII_fake_script() -- TextLabel.Script 
+	local script = Instance.new('Script', TextLabel)
+
+	local tg = script.Parent
+	
+	while true do
+		tg.Text = 'Loading Star Hub'
+		wait(0.3)
+		tg.Text = 'Loading Star Hub.'
+		wait(0.3)
+		tg.Text = 'Loading Star Hub..'
+		wait(0.3)
+		tg.Text = 'Loading Star Hub...'
+		wait(0.7)
+	end
+end
+coroutine.wrap(DRZDII_fake_script)()
+local function PHOII_fake_script() -- loader.Script 
+	local script = Instance.new('Script', loader)
+
+	wait(3)
+	
+	
+	if game.PlaceId == 11040063484 then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/globaldoeslua/Star-Hub/main/swordfighters.lua'))()
+	end
+	
+	loader:Destroy()
+end
+coroutine.wrap(PHOII_fake_script)()
